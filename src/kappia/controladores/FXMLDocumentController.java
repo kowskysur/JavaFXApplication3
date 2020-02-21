@@ -6,27 +6,17 @@
 
 package kappia.controladores;
 
-import static antlr.build.ANTLR.root;
-import java.awt.event.MouseEvent;
-import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import kappia.dao.ClienteDAO;
 import kappia.entidades.Cliente;
-import kappia.utilidades.Conexion;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -42,6 +32,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private Button boton2;
+    
+    @FXML
+    private Button btnMenuConsultaPlanes;
 
     
 
@@ -109,6 +102,24 @@ public class FXMLDocumentController implements Initializable {
             e.printStackTrace();
         
         }
+    }
+    
+    @FXML
+    void show_pantallaConsultaPlanes(ActionEvent event) {
+        try{
+            Parent root1 = FXMLLoader.load(getClass().getResource("/kappia/vistas/FXMLAgregarPlanes.fxml"));
+
+            Stage stage = new Stage();
+            //FullScreen
+            stage.setMaximized(true);
+            stage.setTitle("Ingresar Nuevo Plan");
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        }catch(Exception e) {
+            e.printStackTrace();
+        
+        }
+
     }
 
 }

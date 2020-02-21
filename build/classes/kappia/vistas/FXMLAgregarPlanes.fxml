@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="kappia.controladores.FXMLAgregarPlanesController">
+   <children>
+      <ScrollPane layoutX="71.0" layoutY="47.0" prefHeight="800.0" prefWidth="1400.0">
+         <content>
+            <GridPane prefHeight="800.0" prefWidth="1000.0">
+               <children>
+                  <Label fx:id="labelDescripcionPlan" prefHeight="150.0" prefWidth="500.0" text="Descripción:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="labelEstadoPlan" layoutX="10.0" layoutY="141.0" prefHeight="150.0" prefWidth="500.0" text="Estado" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="inputTextNombrePlan" prefHeight="101.0" prefWidth="480.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="inputTextDescripcionPlan" layoutX="188.0" layoutY="48.0" prefHeight="101.0" prefWidth="480.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="inputTextEstadoPlan" layoutX="188.0" layoutY="149.0" prefHeight="101.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button fx:id="btnGuardarPlan" mnemonicParsing="false" onAction="#guardarNuevoPlan" prefHeight="98.0" prefWidth="573.0" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="labelNombePlan" prefHeight="150.0" prefWidth="457.0" text="Nombre Plan: ">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="50.0" top="1.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

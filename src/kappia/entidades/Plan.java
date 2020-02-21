@@ -9,6 +9,8 @@ package kappia.entidades;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,10 +24,11 @@ import javax.persistence.Table;
 public class Plan implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idPlan")
     private Integer idPlan;
-    @Column(name = "nombrePlan")
-    private String nombrePlan;
+    @Column(name = "nombre")
+    private String nombre;
     @Column(name = "descripcion")
     private String descripcion;
     @Column(name = "estado")
@@ -38,9 +41,15 @@ public class Plan implements Serializable {
         this.idPlan = idPlan;
     }
 
-    public Plan(Integer idPlan, String nombrePlan, String descripcion, short estado) {
+    public Plan(Integer idPlan, String nombre, String descripcion, short estado) {
         this.idPlan = idPlan;
-        this.nombrePlan = nombrePlan;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.estado = estado;
+    }
+    
+    public Plan(String nombre, String descripcion, short estado) {
+        this.nombre = nombre;
         this.descripcion = descripcion;
         this.estado = estado;
     }
@@ -53,12 +62,12 @@ public class Plan implements Serializable {
         this.idPlan = idPlan;
     }
 
-    public String getNombrePlan() {
-        return nombrePlan;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombrePlan(String nombrePlan) {
-        this.nombrePlan = nombrePlan;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {

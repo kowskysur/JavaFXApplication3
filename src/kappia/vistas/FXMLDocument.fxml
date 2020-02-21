@@ -8,19 +8,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kappia.controladores.FXMLDocumentController">
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kappia.controladores.FXMLDocumentController">
     <children>
         <Button fx:id="button" layoutX="754.0" layoutY="578.0" onAction="#handleButtonAction" text="Click Me!" />
-      <VBox layoutX="25.0" layoutY="14.0" prefHeight="615.0" prefWidth="288.0" style="-fx-background-color: GREY;">
+      <VBox layoutX="25.0" layoutY="46.0" prefHeight="716.0" prefWidth="537.0" style="-fx-background-color: GREY;">
          <children>
             <VBox>
                <children>
-                  <Button fx:id="boton2" contentDisplay="CENTER" mnemonicParsing="false" onAction="#show_pantallaClientes" prefHeight="88.0" prefWidth="305.0" style="-fx-border-color: BLACK;" text="INSCRIPCIONES" textFill="#5e261d">
+                  <Button fx:id="boton2" contentDisplay="CENTER" mnemonicParsing="false" onAction="#show_pantallaClientes" prefHeight="88.0" prefWidth="538.0" style="-fx-border-color: BLACK;" text="INSCRIPCIONES" textFill="#5e261d">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnMenuConsultaClientes" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#show_pantallaConstultaClientes" prefHeight="88.0" prefWidth="305.0" style="-fx-border-color: BLACK;" text="CONSULTAS" textFill="#5e261d">
+                  <Button fx:id="btnMenuConsultaClientes" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#show_pantallaConstultaClientes" prefHeight="88.0" prefWidth="540.0" style="-fx-border-color: BLACK;" text="CONSULTAS" textFill="#5e261d">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMenuConsultaPlanes" contentDisplay="CENTER" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" onAction="#show_pantallaConsultaPlanes" prefHeight="88.0" prefWidth="540.0" style="-fx-border-color: BLACK;" text="PLANES" textFill="#5e261d">
                      <font>
                         <Font size="25.0" />
                      </font>
@@ -29,10 +34,5 @@
             </VBox>
          </children>
       </VBox>
-      <ImageView fitHeight="432.0" fitWidth="493.0" layoutX="344.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../Desktop/KAPPIALOGO.png" />
-         </image>
-      </ImageView>
     </children>
 </AnchorPane>
